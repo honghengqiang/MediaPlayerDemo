@@ -67,9 +67,9 @@ public class MainActivity extends AppCompatActivity {
     void play() {
         //String path = Environment.getExternalStorageDirectory().getAbsolutePath() + "/Love_Me_For_Me.mp3";
         //mediaPlayerUtil.initMediaPlayer(this,path,1);
-        mediaPlayerUtil.initMediaPlayer(MainActivity.this, path + "/recorder.amr", 1);
-        //String path = "https://files.7tkt.com/question_voice_file/d25584415b80527c42d70f03162d1776_ryupppj9ew8r4qtzgnngi86ql4y4xtr5.mp3";
-        //mediaPlayerUtil.initMediaPlayer(this, path, 2);
+        //mediaPlayerUtil.initMediaPlayer(MainActivity.this, path + "/recorder.amr", 1);
+        String path = "https://files.7tkt.com/question_voice_file/d25584415b80527c42d70f03162d1776_ryupppj9ew8r4qtzgnngi86ql4y4xtr5.mp3";
+        mediaPlayerUtil.initMediaPlayer(this, path, 2);
     }
 
     @Override

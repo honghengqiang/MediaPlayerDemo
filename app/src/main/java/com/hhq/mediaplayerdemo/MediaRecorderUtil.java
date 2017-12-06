@@ -40,7 +40,12 @@ public class MediaRecorderUtil {
         }
     }
 
-
+    public int getVoice(){
+        if(mediaRecorder!=null) {
+            return mediaRecorder.getMaxAmplitude();
+        }
+        return 0;
+    }
 
     public void stop(){
         // 停止录音

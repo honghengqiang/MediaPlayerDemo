@@ -2,8 +2,6 @@ package com.hhq.mediaplayerdemo;
 
 import android.app.Application;
 
-import com.squareup.leakcanary.LeakCanary;
-
 /**
  * Created by Administrator on 2017/11/1.
  * @author  hhq
@@ -14,7 +12,7 @@ public class App extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        LeakCanary.install(this);
+        //LeakCanary.install(this);
         CrashHandler.getInstance().init(this);
     }
 

@@ -35,6 +35,12 @@ public class MediaPlayerUtil {
     }
 
 
+    public MediaPlayer getMediaPlayer(){
+        if(mediaPlayer != null) {
+            return mediaPlayer;
+        }
+        return null;
+    }
 
     /**
     * 初始化mediaplayer
@@ -102,6 +108,13 @@ public class MediaPlayerUtil {
         }
     }
 
+    public boolean isPlaying(){
+        if(mediaPlayer.isPlaying()) {
+            return true;
+        }else {
+            return false;
+        }
+    }
 
     public void release(){
         if(mediaPlayer!=null) {
@@ -114,6 +127,26 @@ public class MediaPlayerUtil {
             return mediaPlayer.getCurrentPosition();
         } else {
             return 0;
+        }
+    }
+
+    public int getTotalTime(){
+        if (mediaPlayer != null && mediaPlayer.isPlaying()) {
+            return mediaPlayer.getDuration();
+        } else {
+            return 0;
+        }
+    }
+
+    public void reset(){
+        if(mediaPlayer != null) {
+            mediaPlayer.reset();
+        }
+    }
+
+    public void start(){
+        if(mediaPlayer != null) {
+            mediaPlayer.start();
         }
     }
 
